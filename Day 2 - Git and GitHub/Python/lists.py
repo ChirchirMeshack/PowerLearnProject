@@ -1,4 +1,4 @@
-ruits = ["apple", "banana", "cherry"]
+fruits = ["apple", "banana", "cherry"]  # Fixed "ruits" to "fruits"
 
 # Accessing elements
 print(fruits[0])  # Outputs: apple
