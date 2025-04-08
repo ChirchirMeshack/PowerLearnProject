@@ -1,0 +1,6 @@
+This is the first line.
+Python makes file processing quite straightforward.
+We need to read this content,
+count all the words present,
+and then write everything in uppercase to a new file.
+Mission accomplished?
