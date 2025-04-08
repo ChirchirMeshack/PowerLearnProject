@@ -1,0 +1,184 @@
+/* Basic Reset & Defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem; /* Add padding for smaller screens */
+}
+
+/* Header and Navigation */
+.site-header {
+    background-color: #2c3e50; /* Dark blue-grey */
+    color: #ecf0f1; /* Light grey */
+    padding: 1rem 0;
+    position: sticky; /* Make nav bar sticky */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-nav {
+    display: flex; /* Use Flexbox for nav layout */
+    justify-content: space-between; /* Space logo and links */
+    align-items: center;
+}
+
+.main-nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; /* Use Flexbox for nav items */
+}
+
+.main-nav ul li {
+    margin-left: 1.5rem;
+}
+
+.main-nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid transparent; /* For hover effect */
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a:focus {
+    color: #3498db; /* A contrasting blue for hover */
+    border-bottom-color: #3498db;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #34495e; /* Slightly lighter blue-grey */
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Content Area - Using CSS Grid */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: 1 column for mobile */
+    gap: 1.5rem; /* Space between grid items */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.content-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.content-card h2 {
+    color: #2c3e50;
+    margin-bottom: 0.75rem;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #2c3e50;
+    color: #bdc3c7; /* Lighter grey for footer text */
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem; /* Space above the footer */
+    font-size: 0.9rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+}
+
+
+/* --- Media Queries for Responsive Design --- */
+
+/* Tablet View (e.g., screens >= 768px) */
+@media (min-width: 768px) {
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Desktop View (e.g., screens >= 1024px) */
+@media (min-width: 1024px) {
+    .content-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+
+     .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Adjust navigation for very small screens if needed (optional) */
+@media (max-width: 600px) {
+    .main-nav {
+        flex-direction: column; /* Stack logo and nav links */
+        align-items: center;
+    }
+
+    .main-nav .logo {
+        margin-bottom: 0.5rem;
+    }
+
+    .main-nav ul {
+       justify-content: center; /* Center nav items */
+       flex-wrap: wrap; /* Allow items to wrap */
+       margin-top: 0.5rem;
+    }
+
+     .main-nav ul li {
+        margin: 0 0.5rem 0.5rem; /* Adjust spacing */
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}

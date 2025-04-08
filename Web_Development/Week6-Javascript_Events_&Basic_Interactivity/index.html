@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kalenjin People of Kenya</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-content">
+            <h1>Kalenjin: A Living Heritage</h1>
+            <p>Discover the enduring traditions and rich material culture.</p>
+       </div>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2>Who are the Kalenjin?</h2>
+            <p>The Kalenjin are a Nilotic ethnic group indigenous to the Rift Valley Province in Kenya. They are known for their rich cultural heritage, distinct language subgroups, and remarkable athletic prowess, particularly in long-distance running.</p>
+            <button id="toggleDetailsBtn">Learn More About Subgroups</button>
+            <div id="subgroupDetails" class="hidden-details">
+                <p>The Kalenjin are actually a collection of related subtribes sharing linguistic and cultural similarities. Some of the major subgroups include:</p>
+                <ul>
+                    <li>Kipsigis</li>
+                    <li>Nandi</li>
+                    <li>Tugen</li>
+                    <li>Keiyo</li>
+                    <li>Marakwet</li>
+                    <li>Pokot</li>
+                    <li>Sabaot</li>
+                    <li>Terik</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="culture">
+            <h2>Culture and Traditions</h2>
+            <p>Kalenjin culture is deeply rooted in pastoralism and agriculture. Traditional practices include age-set systems, initiation ceremonies (like *Tumdo*), storytelling, music, and dance. Ugali (made from maize or millet flour) served with milk (*mursik*) or vegetables is a dietary staple.</p>
+            <img src="mursik.jpg" alt="Kalenjin cultural food" style="max-width:100%; height:auto; margin-top: 10px;">
+             <p id="imageCaption">Hover over the image for a 'fact' (Placeholder interaction).</p>
+        </section>
+
+        <section id="athletics">
+            <h2>Running Legends</h2>
+            <p>The Kalenjin community has produced a disproportionately high number of world-class middle and long-distance runners. This phenomenon is often attributed to factors like high altitude living, genetics, diet, and a culture that values endurance.</p>
+            <p>Famous names like Eliud Kipchoge, Kipchoge Keino, Faith Kipyegon, and Brigid Kosgei are testament to this legacy.</p>
+        </section>
+
+        <section id="quiz">
+            <h2>Test Your Knowledge!</h2>
+            <form id="kalenjinQuiz">
+                <div class="quiz-question">
+                    <label for="q1">Which region are the Kalenjin primarily indigenous to?</label>
+                    <select id="q1" name="q1" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="coast">Coast Province</option>
+                        <option value="riftvalley">Rift Valley Province</option>
+                        <option value="central">Central Province</option>
+                    </select>
+                </div>
+                <div class="quiz-question">
+                    <label for="q2">What is *Mursik*?</label><br>
+                    <input type="radio" id="q2a" name="q2" value="dance" required> <label for="q2a">A traditional dance</label><br>
+                    <input type="radio" id="q2b" name="q2" value="milk"> <label for="q2b">Fermented milk</label><br>
+                    <input type="radio" id="q2c" name="q2" value="ceremony"> <label for="q2c">An initiation ceremony</label>
+                 </div>
+                 <button type="submit">Check Answers</button>
+                 <div id="quizResult" class="feedback"></div>
+            </form>
+        </section>
+
+
+        <section id="contact">
+            <h2>Share Your Story or Ask a Question</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" required>
+                    <div class="error-message" id="nameError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" required>
+                     <div class="error-message" id="emailError"></div>
+                </div>
+                <div class="form-group">
+                    <label for="userMessage">Message:</label>
+                    <textarea id="userMessage" name="userMessage" rows="4" required></textarea>
+                     <div class="error-message" id="messageError"></div>
+                </div>
+                <button type="submit">Send Message</button>
+                <div id="formStatus" class="feedback"></div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Exploring Kalenjin Heritage. Content for demonstration purposes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

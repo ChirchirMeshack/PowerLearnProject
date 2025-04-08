@@ -1,0 +1,169 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header#main-header { 
+  
+    background-image: url('mara.webp'); /* Placeholder Image */
+    background-size: cover;      /* Cover the entire header area */
+    background-position: center; /* Center the image */
+    height: 50vh;                /* Header height (60% of viewport height) */
+    color: #fff;                 /* White text color for contrast */
+    padding: 1rem 0;             /* Reset previous padding if needed */
+    text-align: center;          /* Center text */
+
+    /* Flexbox for vertical and horizontal centering of content */
+    display: flex;
+    justify-content: center;     /* Horizontal centering */
+    align-items: center;         /* Vertical centering */
+}
+
+.header-content {
+    background-color: rgba(0, 0, 0, 0.65); /* Semi-transparent black background */
+    padding: 1.5rem 2.5rem;               /* Padding inside the box */
+    border-radius: 5px;                  /* Slightly rounded corners */
+    display: inline-block;               /* Fit content width */
+    max-width: 80%;                    /* Prevent box from getting too wide */
+}
+
+/* Adjust default margins for h1 and p inside the new header context */
+header#main-header h1 {
+    margin-bottom: 0.5rem; /* Reduce space below h1 */
+    padding-bottom: 0; /* Remove padding if inherited */
+    border-bottom: none; /* Remove border if inherited */
+    color: #fff; /* Ensure white color */
+    font-size: 2.5em; /* Example: Make title larger */
+}
+
+header#main-header p {
+    margin-bottom: 0; /* Remove space below paragraph */
+    font-size: 1.2em; /* Example: Make subtitle larger */
+    color: #eee; /* Slightly off-white for subtitle */
+}
+
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    color: #006400;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #d4af37; /* Gold-ish */
+    color: #333;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #c8a02b;
+}
+
+/* Interactive Element Styling */
+.hidden-details {
+    display: none; /* Initially hidden */
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #e9f5e9;
+    border-left: 4px solid #006400;
+    border-radius: 4px;
+}
+
+/* Form Styling */
+#contactForm, #kalenjinQuiz {
+    margin-top: 1rem;
+}
+
+.form-group, .quiz-question {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Prevents padding from adding to width */
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resize */
+}
+
+/* Form Validation & Feedback Styling */
+.feedback {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.feedback.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.feedback.error, .error-message {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+    margin-top: 0.5rem; /* For individual messages */
+    padding: 0.5rem; /* For individual messages */
+    border-radius: 4px; /* For individual messages */
+    font-size: 0.9em;
+}
+
+.error-message {
+     display: none; /* Hide error messages initially */
+}
+
+
+input:invalid, textarea:invalid {
+   /* You could add styles for HTML5 invalid state, but JS provides more control */
+   /* border-color: #a94442; */
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
