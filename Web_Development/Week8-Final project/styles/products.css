@@ -1,0 +1,152 @@
+/* Products Header */
+.products-header {
+  background-color: var(--background-alt);
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.products-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumb {
+  color: var(--text-light);
+  font-size: 0.875rem;
+}
+
+.breadcrumb a {
+  color: var(--text-color);
+}
+
+.breadcrumb a:hover {
+  color: var(--primary-color);
+}
+
+/* Products Layout */
+.products-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+  background-color: var(--background-alt);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  position: sticky;
+  top: calc(var(--header-height) + 1rem);
+  height: max-content;
+}
+
+.filter-group {
+  margin-bottom: 1.5rem;
+}
+
+.filter-group h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.filter-options label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.filter-options input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.price-slider {
+  margin-top: 1rem;
+}
+
+.price-range {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.price-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.sort-select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.25rem;
+  background-color: var(--background-color);
+  font-family: inherit;
+  font-size: 0.875rem;
+}
+
+.apply-filters {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Products Grid */
+.products-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.products-count {
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    position: static;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-header h1 {
+    font-size: 2rem;
+  }
+}
