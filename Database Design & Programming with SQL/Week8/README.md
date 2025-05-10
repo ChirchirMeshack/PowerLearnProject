@@ -4,6 +4,11 @@
 
 This database is designed to help users track their movie and TV series watching habits. It allows users to log what they've watched, rate it, maintain a watchlist, and track progress on series. The database also provides a recommendation system based on viewing history.
 
+## ERD Diagram
+You can view the ERD diagram for the Ultimate Binge Log by clicking the link below:
+
+[Ultimate Binge Log ERD Diagram](Ultimate%20Binge%20Log.pdf)
+
 ## Database Schema
 
 The database consists of the following tables:
